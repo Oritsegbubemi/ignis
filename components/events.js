@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ScrollView, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 import firebase from "firebase";
+import * as Animatable from 'react-native-animatable';
 
 var screenWidth = Dimensions.get('window').width;
 var screenHeight = Dimensions.get('window').height;
@@ -14,6 +15,43 @@ export default function Events() {
     const [expID, setExpID] = useState("");
     const [expEvent, setExpEvent] = useState("");
 
+    // ToDo
+
+    const deleteTodo = id => {
+        setTodoo(prevTodo => {
+            return prevTodo.filter(item => item.id != id);
+        });
+    };
+    const addTodo = (id,todo) => {
+        setTodoo(prevTodo => {
+            return prevTodo.filter(item => item.id != id);
+        });
+        setTodoo(prevTodo => {
+            return [{id: id, todo: todo}, ...prevTodo]
+        });
+    }
+    function findById(source, id){
+        for (var i = 0; i < source.length; i++){
+            if (source[i].id === id){
+                return true
+            }
+        }
+        return false
+    }
+    const eventDatabase = () => {
+        // This should be worked upon ()
+        firebase
+        .database()
+        .ref('/users/' + firebase.auth().currentUser.uid + '/events/' + eventID.toLowerCase()).update({
+            eventName: eventID,
+            todolist: todoo
+        })
+        setTodoo([]); seteventID(""); setmodalState("")
+        setTimeout(() => {alert(`Save ${eventID} changes`)}, 100)
+        
+    }
+
+    //Others
     useEffect(() => getData())
     const getData = () => {
         firebase.database()
@@ -155,31 +193,62 @@ export default function Events() {
             expID == events[item].eventName && expEvent == events[item].event?(
             <View style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
                 <TouchableOpacity  onPress={() => {setExpID(""); setExpEvent("")}}  style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.05}}>
-                    <Text style={{fontSize: screenWidth*0.04, fontWeight: "bold"}}>{events[item].eventName} {events[item].event}</Text>
-                    <MaterialCommunityIcons name="chevron-down" style={{color: 'green', fontSize: screenWidth*0.06}}/>
+                    <Text style={{fontSize: screenWidth*0.045, fontWeight: "bold"}}>{events[item].eventName} {events[item].event}</Text>
+                    <MaterialCommunityIcons name="chevron-down" style={{color: 'blue', fontSize: screenWidth*0.08}}/>
                 </TouchableOpacity>
                 <View style={{flexDirection: "row", marginBottom: 5}}>
                     <Text style={{fontSize: screenWidth*0.03, fontWeight: "bold"}}>{days_remaining(events[item].dateYear,events[item].dateMonth,events[item].dateDay)}</Text>
                     <Text style={{fontSize: 10, fontSize: screenWidth*0.03, fontWeight: "bold"}}> days left</Text>
                 </View>
 
+
+                {/* The Event todo */}
+
                 <ScrollView horizontal alwaysBounceVertical showsHorizontalScrollIndicator={false} style={{ padding: 0, margin: 0, flex: 1}}>
                     <View style={{justifyContent: "flex-start", alignItems: "center"}}>
                         <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start"}}>
-        
+
+                            {/* Old FlatList */}
                             <FlatList
                             data={events[item].todolist}
                             renderItem={({item}) =>
-                            
-                            <View style={{backgroundColor: "white", borderBottomWidth: 0, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
-                            
-                                <View style={{flexDirection: "row", justifyContent: "flex-start", alignItems: "center", height: screenHeight * 0.015}}>
-                                    <MaterialCommunityIcons name="chevron-double-right" style={{color: 'green', fontSize: screenWidth*0.03}}/>
-                                    <Text style={{fontSize: screenWidth*0.030}}>{item.todo}</Text>
+                            findById(todoo, item.id) == true?(
+                                <View>
+                                    <TouchableOpacity onPress={() => deleteTodo(item.id)} style={{backgroundColor: "white", borderBottomWidth: 0, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
+                                        <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.02,  width: screenWidth * 0.65}}>
+                                            <View style={{flexDirection: "row", alignItems: "center" }}>
+                                            <MaterialCommunityIcons name="chevron-double-right" style={{color: 'green', fontSize: screenWidth*0.03}}/>
+                                                <Text style={{fontSize: screenWidth*0.035}}>{item.todo}</Text>
+                                            </View>
+
+                                            <View style={{alignItems: "center", marginHorizontal: 5}}>
+                                                <MaterialCommunityIcons name="check" style={{color: 'green', fontSize: screenWidth*0.05}}/>
+                                            </View>
+                                        </View>
+                                    </TouchableOpacity>
                                 </View>
-                            </View>
+                            ):(
+                                <View>
+                                    <View>
+                                        <TouchableOpacity onPress={() => addTodo(item.id, item.todo)} style={{backgroundColor: "white", borderBottomWidth: 0, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
+                                            <Animatable.View style={{flexDirection: "row", alignItems: "center"}} animation="pulse" easing="ease-out" iterationCount="infinite">
+                                                <MaterialCommunityIcons name="chevron-double-right" style={{color: 'green', fontSize: screenWidth*0.03}}/>
+                                                <Text style={{fontSize: screenWidth*0.035}}>{item.todo}</Text>
+                                            </Animatable.View>
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+                            )
                             }
+
                             keyExtractor={(item, index) => index}
+                            ListFooterComponent={
+                                <View style={{flexDirection: "row", alignItems: "center", margin: 10, justifyContent: 'center', alignSelf: 'center' }}>
+                                    <TouchableOpacity onPress={() => eventDatabase()} style={{backgroundColor: "#00695c", width: screenWidth * 0.48, height: screenHeight * 0.05, borderRadius: 10, alignItems: "center", justifyContent: "center", marginRight: screenWidth*0.02}}>
+                                        <MaterialCommunityIcons name="check-outline" style={{color: 'white', fontSize: screenWidth*0.08 }}/>
+                                    </TouchableOpacity>
+                                </View>
+                            }
                             />
                         </View> 
                     </View>
@@ -188,8 +257,8 @@ export default function Events() {
             ):(
             <TouchableOpacity onPress={() => {setExpID(events[item].eventName); setExpEvent(events[item].event)}} style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
                 <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.04}}>
-                    <Text style={{fontSize: screenWidth*0.04}}>{events[item].eventName} {events[item].event.toLowerCase()}</Text>
-                    <MaterialCommunityIcons name="chevron-right" style={{color: 'green', fontSize: screenWidth*0.05}}/>
+                    <Text style={{fontSize: screenWidth*0.045}}>{events[item].eventName} {events[item].event.toLowerCase()}</Text>
+                    <MaterialCommunityIcons name="chevron-right" style={{color: 'blue', fontSize: screenWidth*0.08}}/>
                 </View>
             </TouchableOpacity> 
             )
@@ -205,7 +274,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: "space-evenly"
+        justifyContent: "space-evenly",
     },
     minipictureModule1: {
         width: screenWidth * 0.2,
@@ -244,3 +313,17 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     }
 });
+
+
+{/* <FlatList
+data={events[item].todolist}
+renderItem={({item}) =>
+<View style={{backgroundColor: "white", borderBottomWidth: 0, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
+    <View style={{flexDirection: "row", justifyContent: "flex-start", alignItems: "center", height: screenHeight * 0.015}}>
+        <MaterialCommunityIcons name="chevron-double-right" style={{color: 'green', fontSize: screenWidth*0.03}}/>
+        <Text style={{fontSize: screenWidth*0.030}}>{item.todo}</Text>
+    </View>
+</View>
+}
+keyExtractor={(item, index) => index}
+/> */}
