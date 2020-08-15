@@ -257,7 +257,7 @@ export default function Events() {
             ):(
             <TouchableOpacity onPress={() => {setExpID(events[item].eventName); setExpEvent(events[item].event)}} style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
                 <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.04}}>
-                    <Text style={{fontSize: screenWidth*0.045}}>{events[item].eventName} {events[item].event.toLowerCase()}</Text>
+                    <Text style={{fontSize: screenWidth*0.045}}>{events[item].eventName} {events[item].event}</Text>
                     <MaterialCommunityIcons name="chevron-right" style={{color: 'blue', fontSize: screenWidth*0.08}}/>
                 </View>
             </TouchableOpacity> 
