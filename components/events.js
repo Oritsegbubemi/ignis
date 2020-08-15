@@ -47,7 +47,7 @@ export default function Events() {
         //     todolist: todoo
         // })
         // setTodoo([]); seteventID(""); setmodalState("")
-        setTimeout(() => {alert(`Save changes`)}, 100)
+        setTimeout(() => {alert(`Completed Event Todo`)}, 100)
         
     }
 
