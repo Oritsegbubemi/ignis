@@ -1,0 +1,68 @@
+[{
+	"id":1,
+	"todo": "Form a team "
+},
+{
+	"id":2,
+	"todo": "Survey classmates for ideas"
+},
+{
+	"id":3,
+	"todo": "Create a budget"
+},
+{
+	"id":4,
+	"todo": "Set a date and time"
+},
+{
+	"id":5,
+	"todo": "Choose a venue "
+},
+{
+	"id":6,
+	"todo": "Brainstorm the initial plans"
+},
+{
+	"id":7,
+	"todo": "Create a list of the alumni and contact them with details of the reunion "
+},
+{
+	"id":8,
+	"todo": "Develop an agenda for the event "
+},
+{
+	"id":9,
+	"todo": "Plan the entertainment "
+},
+{
+	"id":10,
+	"todo": "Hire a photographer or videographer"
+},
+{
+	"id":11,
+	"todo": "Hire a caterer and set the menu"
+},
+{
+	"id":12,
+	"todo": "Determine and arrange for any additional activities"
+},
+{
+	"id":13,
+	"todo": "Work out lodging arrangements for out-of-town guests"
+},
+{
+	"id":14,
+	"todo": "Publicize the event and send out invites"
+},
+{
+	"id":15,
+	"todo": "Purchase a gift for the school"
+},
+{
+	"id":16,
+	"todo": "Create an old photo slide show"
+},
+{
+	"id":17,
+	"todo": "Arrange event staffing and waiters"
+}]

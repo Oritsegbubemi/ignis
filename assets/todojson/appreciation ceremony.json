@@ -1,0 +1,48 @@
+[{
+	"id":1,
+	"todo": "Write a brief"
+},
+{
+	"id":2,
+	"todo": "Pick a theme"
+},
+{
+	"id":3,
+	"todo": "Plan the stage design"
+},
+{
+	"id":4,
+	"todo": "Create a floor plan (nominees should be close to the stage)"
+},
+{
+	"id":6,
+	"todo": "Plan sound and video"
+},
+{
+	"id":7,
+	"todo": "Pick the award songs"
+},
+{
+	"id":8,
+	"todo": "Appoint a ceremony host"
+},
+{
+	"id":9,
+	"todo": "Appoint speakers"
+},
+{
+	"id":10,
+	"todo": "Find relevant vendors"
+},
+{
+	"id":11,
+	"todo": "Create an outline of events"
+},
+{
+	"id":12,
+	"todo": "Rehearse the ceremony"
+},
+{
+	"id":13,
+	"todo": "Promote the event(social media, posters, email)"
+}]

@@ -1,0 +1,40 @@
+[{
+	"id":1,
+	"todo": "Choose a date and time"
+},
+{
+	"id":2,
+	"todo": "Pick a location (preferably a garden) "
+},
+{
+	"id":3,
+	"todo": "Decide on the number of guests"
+},
+{
+	"id":4,
+	"todo": "Pick a theme"
+},
+{
+	"id":5,
+	"todo": "Plan the Menu"
+},
+{
+	"id":6,
+	"todo": "Entertainment (fun games)"
+},
+{
+	"id":7,
+	"todo": "Food and snacks"
+},
+{
+	"id":8,
+	"todo": "Send out invites"
+},
+{
+	"id":9,
+	"todo": "Host the event "
+},
+{
+	"id":10,
+	"todo": "Remember to pack up after leaving"
+}]

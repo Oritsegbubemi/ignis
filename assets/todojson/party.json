@@ -1,0 +1,40 @@
+[{
+	"id":1,
+	"todo": "Choose a theme"
+},
+{
+	"id":2,
+	"todo": "Define your budget"
+},
+{
+	"id":3,
+	"todo": "Set a date and time "
+},
+{
+	"id":4,
+	"todo": "Choose your venue"
+},
+{
+	"id":5,
+	"todo": "Prepare the guest list"
+},
+{
+	"id":6,
+	"todo": "Send your invites"
+},
+{
+	"id":7,
+	"todo": "Stock up supplies and decorations"
+},
+{
+	"id":8,
+	"todo": "Order a birthday cake"
+},
+{
+	"id":9,
+	"todo": "Plan the food/hire a caterer "
+},
+{
+	"id":10,
+	"todo": "Buy a present/souvenir"
+}]

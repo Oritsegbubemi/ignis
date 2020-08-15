@@ -1,0 +1,48 @@
+[{
+	"id":1,
+	"todo": "Decide who will host the shower"
+},
+{
+	"id":2,
+	"todo": "Set the budget"
+},
+{
+	"id":3,
+	"todo": "Set the date "
+},
+{
+	"id":4,
+	"todo": "Set the theme "
+},
+{
+	"id":5,
+	"todo": "Set the venue"
+},
+{
+	"id":6,
+	"todo": "Order/send  invitations "
+},
+{
+	"id":7,
+	"todo": "Plan food and drinks "
+},
+{
+	"id":8,
+	"todo": "Finalize headcounts/confirm RSVPs"
+},
+{
+	"id":9,
+	"todo": "Confirm reservations for location and/or food"
+},
+{
+	"id":10,
+	"todo": "Get décor, and things for games"
+},
+{
+	"id":11,
+	"todo": "Assign someone to keep track of gifts "
+},
+{
+	"id":12,
+	"todo": "Assign someone to take pictures"
+}]

@@ -1,0 +1,36 @@
+[{
+	"id":1,
+	"todo": "Set goal"
+},
+{
+	"id":2,
+	"todo": "Determine your Return on Investment "
+},
+{
+	"id":3,
+	"todo": "Draft a budget"
+},
+{
+	"id":4,
+	"todo": "Determine your target audience "
+},
+{
+	"id":5,
+	"todo": "Apply for sponsorships"
+},
+{
+	"id":6,
+	"todo": "Decide how you will collect donations and contact information"
+},
+{
+	"id":7,
+	"todo": "Create a guest list and send out invitations"
+},
+{
+	"id":8,
+	"todo": "Promote your event "
+},
+{
+	"id":9,
+	"todo": "Review the event "
+}]

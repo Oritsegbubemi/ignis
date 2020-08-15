@@ -1,0 +1,84 @@
+[{
+	"id":1,
+	"todo": "Decide on theme"
+},
+{
+	"id":2,
+	"todo": "Assemble your team"
+},
+{
+	"id":3,
+	"todo": "Prepare a budget"
+},
+{
+	"id":4,
+	"todo": "Apply for sponsorship/partnership"
+},
+{
+	"id":5,
+	"todo": "Pick a date and time"
+},
+{
+	"id":6,
+	"todo": "Pick a venue"
+},
+{
+	"id":7,
+	"todo": "Organize catering and other vendors"
+},
+{
+	"id":8,
+	"todo": "Contact and line up your speakers"
+},
+{
+	"id":9,
+	"todo": "Put together an adgenga"
+},
+{
+	"id":10,
+	"todo": "start registring attendees"
+},
+{
+	"id":11,
+	"todo": "promote the conference (social media, posters, personal invites)"
+},
+{
+	"id":12,
+	"todo": "On-site planning; Delegate to team members:"
+},
+{
+	"id":13,
+	"todo": "Ticket scanning/geust registration"
+},
+{
+	"id":14,
+	"todo": "Refreshments organization"
+},
+{
+	"id":15,
+	"todo": "Venue decoration"
+},
+{
+	"id":16,
+	"todo": "Prepartion of presentation tools and techical devices"
+},
+{
+	"id":17,
+	"todo": "Handing out souvenirs"
+},
+{
+	"id":18,
+	"todo": "Follow up"
+},
+{
+	"id":19,
+	"todo": "Send 'Thank-You' emails to participants and team members"
+},
+{
+	"id":20,
+	"todo": "Collect feedback"
+},
+{
+	"id":21,
+	"todo": "Write report"
+}]

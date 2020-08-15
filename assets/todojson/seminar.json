@@ -1,0 +1,44 @@
+[{
+	"id":1,
+	"todo": "Determine the purpose of the seminar"
+},
+{
+	"id":2,
+	"todo": "Pick a theme"
+},
+{
+	"id":3,
+	"todo": "Decide the date and time"
+},
+{
+	"id":4,
+	"todo": "Draft a budget"
+},
+{
+	"id":5,
+	"todo": "Pick a venue"
+},
+{
+	"id":6,
+	"todo": "Determine the target audience"
+},
+{
+	"id":7,
+	"todo": "Select Guest Speakers"
+},
+{
+	"id":8,
+	"todo": "Contact the caterer"
+},
+{
+	"id":9,
+	"todo": "Determine means of advertisement/awareness"
+},
+{
+	"id":10,
+	"todo": "Draw up the outline of activities for the event"
+},
+{
+	"id":11,
+	"todo": "Get reviews and feedback from users"
+}]

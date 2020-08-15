@@ -1,0 +1,40 @@
+[{
+	"id":1,
+	"todo": "Decide purpose of meeting"
+},
+{
+	"id":2,
+	"todo": "Decide the date and time"
+},
+{
+	"id":3,
+	"todo": "Drafta budget"
+},
+{
+	"id":4,
+	"todo": "Pick a venue"
+},
+{
+	"id":5,
+	"todo": "Determine the attendees and stakeholders"
+},
+{
+	"id":6,
+	"todo": "Contact caterer"
+},
+{
+	"id":7,
+	"todo": "Prepare presentation tools"
+},
+{
+	"id":8,
+	"todo": "Draft an outline of activites"
+},
+{
+	"id":9,
+	"todo": "Draft an outline of activites"
+},
+{
+	"id":10,
+	"todo": "Create an evaluation plan"
+}]
