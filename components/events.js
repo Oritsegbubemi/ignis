@@ -40,14 +40,14 @@ export default function Events() {
     }
     const eventDatabase = () => {
         // This should be worked upon ()
-        firebase
-        .database()
-        .ref('/users/' + firebase.auth().currentUser.uid + '/events/' + eventID.toLowerCase()).update({
-            eventName: eventID,
-            todolist: todoo
-        })
-        setTodoo([]); seteventID(""); setmodalState("")
-        setTimeout(() => {alert(`Save ${eventID} changes`)}, 100)
+        // firebase
+        // .database()
+        // .ref('/users/' + firebase.auth().currentUser.uid + '/events/' + eventID.toLowerCase()).update({
+        //     eventName: eventID,
+        //     todolist: todoo
+        // })
+        // setTodoo([]); seteventID(""); setmodalState("")
+        setTimeout(() => {alert(`Save changes`)}, 100)
         
     }
 
