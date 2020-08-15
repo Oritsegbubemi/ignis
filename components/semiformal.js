@@ -76,7 +76,7 @@ export default function Semiformal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Fundraiser"); setjsonState(fundraiser)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule2}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/fundraiser.png")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/fundraiser.png")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#b3e5fc", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#01579b", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Fundraiser</Text>

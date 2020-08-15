@@ -80,7 +80,7 @@ export default function Formal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Seminar"); setjsonState(seminar)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule1}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/seminar.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/seminar.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3, overflow: "hidden"}}>
                 <Text style={{color: "#990011FF", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Seminar</Text>
@@ -91,7 +91,7 @@ export default function Formal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Board meeting"); setjsonState(boardmeeting)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule2}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/boardmeeting.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/boardmeeting.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#990011FF", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Board Meeting</Text>
@@ -102,7 +102,7 @@ export default function Formal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Conference"); setjsonState(conference)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/conference.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/conference.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#990011FF", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Conference</Text>
@@ -113,7 +113,7 @@ export default function Formal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Product launch"); setjsonState(productlaunch)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/productlaunch.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/productlaunch.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#990011FF", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Product launch</Text>
@@ -124,7 +124,7 @@ export default function Formal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Trade show"); setjsonState(tradeshow)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/tradeshow.jpeg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/tradeshow.jpeg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#990011FF", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Trade show</Text>
@@ -135,7 +135,7 @@ export default function Formal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Appreciation ceremony"); setjsonState(appreciationceremony)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/appreciationceremony.png")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/appreciationceremony.png")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#990011FF", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Appreciation ceremony</Text>

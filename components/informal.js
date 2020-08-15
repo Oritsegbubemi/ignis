@@ -81,7 +81,7 @@ export default function Informal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Wedding"); setjsonState(wedding)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule1}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/wedding.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/wedding.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3, overflow: "hidden"}}>
                 <Text style={{color: "#00695c", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Wedding</Text>
@@ -92,7 +92,7 @@ export default function Informal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Party"); setjsonState(party)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule2}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/party.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/party.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#00695c", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Party</Text>
@@ -103,7 +103,7 @@ export default function Informal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Reunion"); setjsonState(reunion)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/reunion.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/reunion.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#00695c", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Reunion</Text>
@@ -114,7 +114,7 @@ export default function Informal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Baby shower"); setjsonState(babyshower)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/babyshower.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/babyshower.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#00695c", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Baby shower</Text>
@@ -125,7 +125,7 @@ export default function Informal() {
         <TouchableOpacity style={{marginVertical: 5}} onPress={() => {setmodalState(true); seteventState("Picnic"); setjsonState(picnic)}}>
         <View style={{alignItems: "center", justifyContent: "center", marginHorizontal:10, flexDirection: "row"}}>
             <View style={styles.minipictureModule3}>
-            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/picnic.jpg")}/>
+            <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/picnic.jpg")}/>
             </View>
             <View style={{width: screenWidth * 0.5, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
                 <Text style={{color: "#00695c", fontSize: 10, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Picnic</Text>
