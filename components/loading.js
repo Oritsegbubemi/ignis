@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import firebase from 'firebase';
 
@@ -13,24 +13,24 @@ export default function LoadingPage({navigation}) {
             {
                 navigation.navigate('Home')
             }
-             else {
+            else {
                 navigation.navigate('AuthPage')
             }
         })
     }
-  return (
-    <View style={styles.container}>
-      <Text style={{fontSize: 50, fontWeight: "bold", marginBottom: 30}}>IGNIS</Text>
-      <ActivityIndicator size="large" />
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+            <Text style={{fontSize: 50, fontWeight: "bold", marginBottom: 30}}>IGNIS</Text>
+            <ActivityIndicator size="large" />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });

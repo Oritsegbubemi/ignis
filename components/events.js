@@ -1,8 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, SafeAreaView, FlatList } from 'react-native';
-import {Ionicons, MaterialCommunityIcons} from "@expo/vector-icons"
-import { Actions } from 'react-native-router-flux';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ScrollView, FlatList } from 'react-native';
+import { MaterialCommunityIcons } from "@expo/vector-icons"
 import firebase from "firebase";
 
 var screenWidth = Dimensions.get('window').width;
@@ -149,94 +147,100 @@ export default function Events() {
         return dr
     }
 
-  return (
-    <View style={styles.container}>
-        <FlatList
-        data={Object.keys(events)}
-        renderItem={({item}) =>
-        expID == events[item].eventName && expEvent == events[item].event?(
-        <View style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.75, padding: 12, alignSelf: "center"}}>
-            <TouchableOpacity  onPress={() => {setExpID(""); setExpEvent("")}}  style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.04}}>
-                <Text style={{fontSize: screenWidth*0.03, fontWeight: "bold"}}>{events[item].eventName} {events[item].event}</Text>
-                <MaterialCommunityIcons name="chevron-down" style={{color: 'green', fontSize: screenWidth*0.05}}/>
-            </TouchableOpacity>
-            <View style={{flexDirection: "row"}}>
-                <Text style={{fontSize: screenWidth*0.025}}>{days_remaining(events[item].dateYear,events[item].dateMonth,events[item].dateDay)}</Text>
-                <Text style={{fontSize: 10, fontSize: screenWidth*0.025}}> days left</Text>
-            </View>
-            <View style={{justifyContent: "flex-end", alignItems: "center"}}>
-                <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end"}}>
-                    <FlatList
-                    data={events[item].todolist}
-                    renderItem={({item}) =>
-                    <View style={{backgroundColor: "white", borderBottomWidth: 0, borderColor: "#eee", width: screenWidth * 0.75, padding: 12, alignSelf: "center"}}>
-                        <View style={{flexDirection: "row", justifyContent: "flex-start", alignItems: "center", height: screenHeight * 0.015}}>
-                            <MaterialCommunityIcons name="chevron-double-right" style={{color: 'green', fontSize: screenWidth*0.03}}/>
-                            <Text style={{fontSize: screenWidth*0.020}}>{item.todo}</Text>
-                        </View>
+    return (
+        <View style={styles.container}>
+            <FlatList
+            data={Object.keys(events)}
+            renderItem={({item}) =>
+            expID == events[item].eventName && expEvent == events[item].event?(
+            <View style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
+                <TouchableOpacity  onPress={() => {setExpID(""); setExpEvent("")}}  style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.05}}>
+                    <Text style={{fontSize: screenWidth*0.04, fontWeight: "bold"}}>{events[item].eventName} {events[item].event}</Text>
+                    <MaterialCommunityIcons name="chevron-down" style={{color: 'green', fontSize: screenWidth*0.06}}/>
+                </TouchableOpacity>
+                <View style={{flexDirection: "row", marginBottom: 5}}>
+                    <Text style={{fontSize: screenWidth*0.03, fontWeight: "bold"}}>{days_remaining(events[item].dateYear,events[item].dateMonth,events[item].dateDay)}</Text>
+                    <Text style={{fontSize: 10, fontSize: screenWidth*0.03, fontWeight: "bold"}}> days left</Text>
+                </View>
+
+                <ScrollView horizontal alwaysBounceVertical showsHorizontalScrollIndicator={false} style={{ padding: 0, margin: 0, flex: 1}}>
+                    <View style={{justifyContent: "flex-start", alignItems: "center"}}>
+                        <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start"}}>
+        
+                            <FlatList
+                            data={events[item].todolist}
+                            renderItem={({item}) =>
+                            
+                            <View style={{backgroundColor: "white", borderBottomWidth: 0, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
+                            
+                                <View style={{flexDirection: "row", justifyContent: "flex-start", alignItems: "center", height: screenHeight * 0.015}}>
+                                    <MaterialCommunityIcons name="chevron-double-right" style={{color: 'green', fontSize: screenWidth*0.03}}/>
+                                    <Text style={{fontSize: screenWidth*0.030}}>{item.todo}</Text>
+                                </View>
+                            </View>
+                            }
+                            keyExtractor={(item, index) => index}
+                            />
+                        </View> 
                     </View>
-                    }
-                    keyExtractor={(item, index) => index}
-                    />
-                </View> 
+                </ScrollView>
             </View>
+            ):(
+            <TouchableOpacity onPress={() => {setExpID(events[item].eventName); setExpEvent(events[item].event)}} style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.8, padding: 12, alignSelf: "center"}}>
+                <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.04}}>
+                    <Text style={{fontSize: screenWidth*0.04}}>{events[item].eventName} {events[item].event.toLowerCase()}</Text>
+                    <MaterialCommunityIcons name="chevron-right" style={{color: 'green', fontSize: screenWidth*0.05}}/>
+                </View>
+            </TouchableOpacity> 
+            )
+            }
+            keyExtractor={(item, index) => index}
+            />
         </View>
-        ):(
-        <TouchableOpacity onPress={() => {setExpID(events[item].eventName); setExpEvent(events[item].event)}} style={{backgroundColor: "white", borderBottomWidth: 1, borderColor: "#eee", width: screenWidth * 0.75, padding: 12, alignSelf: "center"}}>
-            <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", height: screenHeight * 0.04}}>
-                <Text style={{fontSize: screenWidth*0.023}}>{events[item].eventName} {events[item].event.toLowerCase()}</Text>
-                <MaterialCommunityIcons name="chevron-right" style={{color: 'green', fontSize: screenWidth*0.05}}/>
-            </View>
-        </TouchableOpacity> 
-        )
-        }
-        keyExtractor={(item, index) => index}
-        />
-    </View>
-  );
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: "space-evenly"
-  },
-  minipictureModule1: {
-    width: screenWidth * 0.2,
-    height: screenWidth * 0.2,
-    backgroundColor: "#990011FF",
-    borderRadius: 5,
-    borderBottomRightRadius: 0,
-    borderTopRightRadius: 0,
-    overflow: "hidden",
-    alignSelf: "center",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  minipictureModule2: {
-    width: screenWidth * 0.2,
-    height: screenWidth * 0.2,
-    backgroundColor: "#01579b",
-    borderRadius: 5,
-    borderBottomRightRadius: 0,
-    borderTopRightRadius: 0,
-    overflow: "hidden",
-    alignSelf: "center",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  minipictureModule3: {
-    width: screenWidth * 0.2,
-    height: screenWidth * 0.2,
-    backgroundColor: "#00695c",
-    borderRadius: 5,
-    borderBottomRightRadius: 0,
-    borderTopRightRadius: 0,
-    overflow: "hidden",
-    alignSelf: "center",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: "space-evenly"
+    },
+    minipictureModule1: {
+        width: screenWidth * 0.2,
+        height: screenWidth * 0.2,
+        backgroundColor: "#990011FF",
+        borderRadius: 5,
+        borderBottomRightRadius: 0,
+        borderTopRightRadius: 0,
+        overflow: "hidden",
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    minipictureModule2: {
+        width: screenWidth * 0.2,
+        height: screenWidth * 0.2,
+        backgroundColor: "#01579b",
+        borderRadius: 5,
+        borderBottomRightRadius: 0,
+        borderTopRightRadius: 0,
+        overflow: "hidden",
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    minipictureModule3: {
+        width: screenWidth * 0.2,
+        height: screenWidth * 0.2,
+        backgroundColor: "#00695c",
+        borderRadius: 5,
+        borderBottomRightRadius: 0,
+        borderTopRightRadius: 0,
+        overflow: "hidden",
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center"
+    }
 });

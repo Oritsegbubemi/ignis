@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import firebase from 'firebase';
-import {firebaseConfig} from "./config";
+import { firebaseConfig } from "./config";
 firebase.initializeApp(firebaseConfig);
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import AuthPage from './components/Auth/AuthPage';

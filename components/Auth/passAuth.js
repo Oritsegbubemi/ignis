@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-export function Register(fname,lname,email,password,cpassword){
+export function Register(fname, lname, email, password, cpassword){
     //setmodalState(true)
     if (fname == "" || lname == "" || email == "" || password == "" || cpassword == "") {
         //setmodalState(false)
@@ -32,12 +32,11 @@ export function Register(fname,lname,email,password,cpassword){
             alert(errorMessage)
             // ...
             
-          });
+        });
     }
 }
 
 export function Login(email,password){
-
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(result){
         console.log("User signed in!")
         firebase
@@ -53,9 +52,10 @@ export function Login(email,password){
         var errorCode = error.code;
         var errorMessage = error.message;
         alert(errorMessage)
-      });
+    });
     
 }
+
 export function ResetPassword(email){
     if(email == ""){
         alert("Please fill in your email address!")
@@ -69,5 +69,5 @@ export function ResetPassword(email){
         // An error happened.
             alert(error)
         });
-}
+    }
 }
