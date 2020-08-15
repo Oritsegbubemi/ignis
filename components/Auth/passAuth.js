@@ -12,7 +12,7 @@ export function Register(fname,lname,email,password,cpassword){
     }
     else {
         firebase.auth().createUserWithEmailAndPassword(email.toLowerCase(), password).then(function(result){
-            console.log("User signed up!")
+            // console.log("User signed up!")
             firebase
                 .database()
                 .ref('/users/' + result.user.uid)

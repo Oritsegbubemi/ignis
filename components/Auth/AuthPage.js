@@ -94,19 +94,21 @@ export default function AuthPage() {
                 }}
                 />
                   <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 50}}>Ignis</Text>
-                  <Animatable.View animation='bounceInLeft' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.08, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.8, bottom: 0}}>
-                    <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.6, justifyContent:"space-between"}}>
-                        <View>
-                            <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 40}}>Email</Text>
-                            <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' onChangeText={text => {setlEmail(text.replace(/\s/g, '')); setsigninD(false); setsigninButton("Sign In")}}/>
-                            <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Password</Text>
+
+                  <Animatable.View animation='bounceInLeft' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.09, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.85, bottom: 0}}>
+                    <View style={{alignItems: "center", marginTop: 5, width: screenWidth * 0.8, justifyContent:"space-between"}}>
+                        <View style={{ }}>
+                            <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 40}}>Email</Text>
+                            <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' keyboardType='email-address' onChangeText={text => {setlEmail(text.replace(/\s/g, '')); setsigninD(false); setsigninButton("Sign In")}}/>
+                            <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Password</Text>
                             <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' secureTextEntry={true} onChangeText={text => {setlPassword(text.replace(/\s/g, '')); setsigninD(false); setsigninButton("Sign In")}}/>
                             
                             <TouchableOpacity style={styles.loginbtn} disabled={signinD} onPress={() => onSigninclick()}>
                                 <Text style={{color: 'white'}}>{signinButton}</Text>
                             </TouchableOpacity>
                         </View>
-                    <View style={{height: screenHeight* 0.22, justifyContent: "flex-end"}}>
+
+                    <View style={{height: screenHeight* 0.2, justifyContent: "flex-end"}}>
                       <View style={{flexDirection: "row", width: screenWidth * 0.72, justifyContent: "space-between", }}>
                         <TouchableOpacity disabled={signinD} style={{alignItems: "center",}} onPress={() => ResetPassword(lemail)}>
                             <View style={{alignItems: "center"}}>
@@ -156,14 +158,14 @@ export default function AuthPage() {
                 }}
                 />
                   <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 50}}>Ignis</Text>
-                  <Animatable.View animation='bounceInRight' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.08, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.8, bottom: 0}}>
-                    <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.6}}>
-                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>First Name</Text>
+                  <Animatable.View animation='bounceInRight' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.09, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.85, bottom: 0}}>
+                    <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.7}}>
+                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>First Name</Text>
                       <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' onChangeText={text => {setFname(text.replace(/\s/g, '')); setsignupD(false); setsignupButton("Submit")}}/>
-                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>Last Name</Text>
+                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>Last Name</Text>
                       <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' onChangeText={text => {setLname(text.replace(/\s/g, '')); setsignupD(false); setsignupButton("Submit")}}/>
-                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>Email</Text>
-                      <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' onChangeText={text => {setsEmail(text.replace(/\s/g, '')); setsigninD(false); setsignupButton("Submit")}}/>
+                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>Email</Text>
+                      <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' keyboardType='email-address' onChangeText={text => {setsEmail(text.replace(/\s/g, '')); setsigninD(false); setsignupButton("Submit")}}/>
                     
                       <TouchableOpacity style={styles.loginbtn} disabled={signupD} onPress={() => signupPass()}>
                         <Text style={{color: 'white'}}>Next</Text>
@@ -171,7 +173,7 @@ export default function AuthPage() {
                       <View style={{marginTop:20}}>
                         <Text style={{color: '#999999', fontSize: 10, fontWeight: "bold"}}>HAVE AN ACCOUNT?</Text>
                       </View>
-                      <TouchableOpacity  style={{marginTop:10}} onPress={() => signin()}>
+                      <TouchableOpacity style={{marginTop:5}} onPress={() => signin()}>
                         <Text style={{color: 'rgba(0,0,220,0.8)', fontSize: 15}}>Sign in</Text>
                       </TouchableOpacity>             
                     </View>
@@ -208,11 +210,11 @@ export default function AuthPage() {
                 }}
                 />
                   <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 50}}>Ignis</Text>
-                  <Animatable.View animation='bounceInRight' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.08, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.8, bottom: 0}}>
-                    <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.6}}>
-                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Enter Password</Text>
+                  <Animatable.View animation='bounceInRight' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.09, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.85, bottom: 0}}>
+                    <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.7}}>
+                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Enter Password</Text>
                       <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' secureTextEntry={true} onChangeText={text => {setsPassword(text.replace(/\s/g, '')); setsignupD(false); setsignupButton("Submit")}}/>
-                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 10, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Confirm Password</Text>
+                      <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Confirm Password</Text>
                       <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' secureTextEntry={true} onChangeText={text => {setcPassword(text.replace(/\s/g, '')); setsignupD(false); setsignupButton("Submit")}}/>
                       
                       <TouchableOpacity style={styles.loginbtnn} onPress={() => signup()}>
@@ -226,7 +228,7 @@ export default function AuthPage() {
                       <View style={{marginTop:20}}>
                         <Text style={{color: '#999999', fontSize: 10, fontWeight: "bold"}}>HAVE AN ACCOUNT?</Text>
                       </View>
-                      <TouchableOpacity  style={{marginTop:10}} onPress={() => signin()}>
+                      <TouchableOpacity  style={{marginTop:5}} onPress={() => signin()}>
                         <Text style={{color: 'rgba(0,0,220,0.8)', fontSize: 15}}>Sign in</Text>
                       </TouchableOpacity>             
                     </View>
@@ -253,23 +255,23 @@ const styles = StyleSheet.create({
       justifyContent: "center"
     },
     inputBox: {
-      width: screenWidth * 0.6,
-      height: screenHeight * 0.06,
+      width: screenWidth * 0.7,
+      height: screenHeight * 0.07,
       backgroundColor: 'rgba(255,0,255,0.2)',
       borderRadius: 10,
       paddingLeft:10,
       fontSize: 13,
       color: 'black',
-      marginVertical: 10,
+      marginVertical: 5,
   },
   loginbtn: {
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: 'rgba(0,0,220,0.8)',
-      width: screenWidth * 0.5,
-      height: screenHeight * 0.05,
+      width: screenWidth * 0.6,
+      height: screenHeight * 0.06,
       borderRadius: 50 ,
-      marginTop: 20,
+      marginTop: 30,
       alignSelf: "center"
   
     },
@@ -277,12 +279,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'rgba(0,0,220,0.4)',
-        width: screenWidth * 0.5,
-        height: screenHeight * 0.05,
+        width: screenWidth * 0.6,
+        height: screenHeight * 0.06,
         borderRadius: 50 ,
-        marginTop: 20,
+        marginTop: 25,
         alignSelf: "center"
-    
       },
   });
   
