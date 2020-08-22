@@ -87,6 +87,7 @@ export default function Semiformal() {
             onRequestClose={() => setmodalState(false)}
             visible={modalState}>       
                 <Animatable.View animation="slideInUp" delay={0} style={{alignSelf: 'center', backgroundColor: "white", margin: screenHeight* 0.2, padding: 3, borderRadius: 10, flex: 1, width: screenWidth * 0.8}} on>
+                    <Text style={{fontSize: 20, textAlign: "center", margin: 0, paddingVertical:10, fontWeight: "bold"}}>{eventState}</Text>
                     <ScrollView>
                     <View style={{alignItems: "center", marginVertical: 10}}>
                         <TextInput style={styles.inputBox} placeholderTextColor='rgba(0,0,0,0.5)' onChangeText={text => seteventID(text)} placeholder={eventState + " name"} />

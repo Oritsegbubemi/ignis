@@ -90,7 +90,7 @@ export default function AuthPage() {
                             }}
                         />
 
-                        <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 50}}>Ignis</Text>
+                        <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 30}}>Ignis</Text>
 
                         <Animatable.View animation='bounceInLeft' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.09, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.85, bottom: 0}}>
                             <View style={{alignItems: "center", marginTop: 5, width: screenWidth * 0.8, justifyContent:"space-between"}}>
@@ -154,7 +154,7 @@ export default function AuthPage() {
                                 height: screenHeight / 2,
                             }}
                         />
-                        <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 50}}>Ignis</Text>
+                        <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 30}}>Ignis</Text>
                         <Animatable.View animation='bounceInRight' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.09, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.85, bottom: 0}}>
                             <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.7}}>
                                 <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 10}}>First Name</Text>
@@ -206,7 +206,7 @@ export default function AuthPage() {
                                 height: screenHeight / 2,
                             }}
                         />
-                        <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 50}}>Ignis</Text>
+                        <Text style={{fontWeight: "bold", color: "black", fontSize: 50, alignSelf: "center", marginTop: 30}}>Ignis</Text>
                         <Animatable.View animation='bounceInRight' delay={0} style={{alignSelf: 'center', borderColor: "black", overflow: "hidden", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", margin: screenHeight* 0.09, padding: 0, borderRadius: 15, flex: 1, width: screenWidth * 0.85, bottom: 0}}>
                             <View style={{alignItems: "center", marginTop: 30, width: screenWidth * 0.7}}>
                                 <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 13, fontWeight: 'bold', alignSelf:"flex-start", marginTop: 20}}>Enter Password</Text>

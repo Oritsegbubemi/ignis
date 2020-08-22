@@ -28,7 +28,7 @@ export default function Home() {
                 setLname(snapshot.val().lastname)
             });
     }
-
+    
     return (
         <SafeAreaView style={styles.container}>
             <LinearGradient
@@ -53,11 +53,20 @@ export default function Home() {
                         width: screenWidth
                     }}
                 />
-            <View style={{marginTop: 20}}>
-                <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 30, fontWeight: 'bold'}}>Hello {fname}!</Text>
-            </View>
-            <View>
-                <View style={{marginVertical: 20, alignItems: "center"}}>
+                <View style={{ flexDirection: 'row', marginTop: 30, justifyContent: 'space-around'}}>
+                    <View>
+                        <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 30, fontWeight: 'bold'}}>Hello {fname}!</Text>
+                    </View>
+
+                    <View animation="pulse" easing="ease-out" iterationCount="infinite" style={{ marginTop: 5, marginLeft: 30}} >
+                        <TouchableOpacity onPress={() => firebase.auth().signOut()}>
+                            <MaterialCommunityIcons name="account-remove-outline" style={{ margin: 0, fontSize: 30, color: "#FCCABD"}} />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+            <View style={{ flex: 1, justifyContent: 'center'}}>
+                <View style={{marginBottom: 20, alignItems: "center"}}>
                     <TouchableOpacity style={{width: screenWidth * 0.4, height: screenWidth * 0.4, backgroundColor: "rgba(255,255,255,0.8)", borderRadius: 10, alignItems: "center", justifyContent: "center"}} onPress={() => {setmodalState(true), setTimeout(() => {Actions.AddEvent.call()}, 500)}}>
                         <View style={{ width: screenWidth * 0.25, height: screenWidth * 0.25, backgroundColor: "#02B1CB", alignItems: "center", justifyContent: "center", borderRadius: screenWidth * 0.15}}>
                             <MaterialCommunityIcons name="plus" style={{fontSize: 80, color: "white"}} />
@@ -74,27 +83,28 @@ export default function Home() {
                     <Text style={{fontSize: 20, fontWeight: "bold", color: "white", marginTop: 5}}>Events</Text>
                 </View>
             </View>
-            <Animatable.View  animation="pulse" easing="ease-out" iterationCount="infinite" >
+            
+            {/* <Animatable.View  animation="pulse" easing="ease-out" iterationCount="infinite" >
                 <TouchableOpacity onPress={() => firebase.auth().signOut()}>
                     <MaterialCommunityIcons name="account-remove-outline" style={{ margin: 0, fontSize: 60, color: "#02B1CB", marginBottom: 5}} />
                 </TouchableOpacity>
-            </Animatable.View>
+            </Animatable.View> */}
 
             <Modal
                 transparent={true}
                 onRequestClose={() => setmodalState(false)}
-                visible={modalState}>
+                visible={modalState}
+            >
                 <BlurView intensity={100} style={[StyleSheet.absoluteFill, styles.nonBlurredContent]}>
-                    <Animatable.View animation="bounceIn" delay={0} style={{alignSelf: 'center', backgroundColor: "white", margin: screenHeight* 0.1, padding: 3, borderRadius: 10, flex: 1, width: screenWidth * 0.85}}>
+                    <Animatable.View animation="bounceIn" delay={0} style={{ marginTop: 100, alignSelf: 'center', backgroundColor: "white", margin: screenHeight* 0.06, padding: 3, borderRadius: 10, flex: 1, width: screenWidth * 0.85, height: screenWidth* 0.7}}>
                         <Routes/>
                     </Animatable.View>
 
                     <TouchableOpacity onPress={() => setmodalState(false)}>
-                        <SafeAreaView style={{alignItems: 'center'}}>
+                        <SafeAreaView style={{alignItems: 'center', marginBottom: 10}}>
                             <Animatable.View style={{width: 50, height: 50, backgroundColor: 'red', borderRadius: 25, alignItems: "center", justifyContent: "center", overflow: "hidden"}} animation="pulse" easing="ease-out" iterationCount="infinite">
                                 <MaterialCommunityIcons name="close" style={{color: 'white', fontSize: screenWidth*0.1 }}/>
                             </Animatable.View>
-                            <Text style={styles.text}>Close</Text>
                         </SafeAreaView>
                     </TouchableOpacity>
                 </BlurView>
@@ -105,9 +115,10 @@ export default function Home() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        //flex: 1,
+        //flexGrow: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: "space-between",
+        //alignItems: 'center',
+        //justifyContent: "space-between",
     },
 });
