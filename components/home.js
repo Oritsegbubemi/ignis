@@ -17,6 +17,7 @@ export default function Home() {
     const [lname,setLname] = useState("");
     const [email,setEmail] = useState("");
     const [modalState,setmodalState] = useState(false);
+    
     useEffect(() => getData())
     const getData = () => {
         firebase.database()
@@ -54,6 +55,13 @@ export default function Home() {
                     }}
                 />
                 <View style={{ flexDirection: 'row', marginTop: 30, justifyContent: 'space-around'}}>
+                
+                    <View animation="pulse" easing="ease-out" iterationCount="infinite" style={{ marginTop: 5, marginRight: 30}} >
+                        <TouchableOpacity onPress={() => {setmodalState(true), setTimeout(() => {Actions.Notification.call()}, 500)}}>
+                            <MaterialCommunityIcons name="bell-outline" style={{ margin: 0, fontSize: 30, color: "#FCCABD"}} />
+                        </TouchableOpacity>
+                    </View>
+
                     <View>
                         <Text style={{color: 'rgba(0,0,0,0.8)', fontSize: 30, fontWeight: 'bold'}}>Hello {fname}!</Text>
                     </View>

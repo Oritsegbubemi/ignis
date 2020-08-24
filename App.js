@@ -9,6 +9,7 @@ import AuthPage from './components/Auth/AuthPage';
 import LoadingPage from './components/loading';
 import Home from './components/home';
 
+
 export default function App() {
     console.disableYellowBox = true;
     return (

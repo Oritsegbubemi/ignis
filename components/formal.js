@@ -330,6 +330,8 @@ const styles = StyleSheet.create({
     imagee: {
         flex: 1,
         resizeMode: "cover",
+        width: screenWidth * 0.2,
+        height: screenWidth * 0.1,
     },
     inputBox: {
         width: screenWidth * 0.65,
