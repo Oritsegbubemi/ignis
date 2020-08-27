@@ -92,12 +92,6 @@ export default function Home() {
                 </View>
             </View>
             
-            {/* <Animatable.View  animation="pulse" easing="ease-out" iterationCount="infinite" >
-                <TouchableOpacity onPress={() => firebase.auth().signOut()}>
-                    <MaterialCommunityIcons name="account-remove-outline" style={{ margin: 0, fontSize: 60, color: "#02B1CB", marginBottom: 5}} />
-                </TouchableOpacity>
-            </Animatable.View> */}
-
             <Modal
                 transparent={true}
                 onRequestClose={() => setmodalState(false)}

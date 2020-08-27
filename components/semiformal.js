@@ -77,8 +77,8 @@ export default function Semiformal() {
                 <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/fundraiser.png")}/>
                 </View>
                 <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#b3e5fc", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                    <Text style={{color: "#01579b", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Fundraiser</Text>
-                    <Text style={{color: "#01579b", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>An event held to generate financial support for a charity, cause, or other enterprise.</Text>
+                    <Text style={{color: "#01579b", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Fundraiser</Text>
+                    <Text style={{color: "#01579b", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>An event held to generate financial support for a charity, cause, or other enterprise.</Text>
                 </View>
             </View>
             </TouchableOpacity>

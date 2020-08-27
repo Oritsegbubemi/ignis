@@ -81,8 +81,8 @@ export default function Informal() {
                 <Image style={styles.imagee} resizeMode="cover" source={require("../assets/images/wedding.jpg")}/>
                 </View>
                 <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Wedding</Text>
-                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A marriage ceremony, especially considered as including the associated celebrations.</Text>
+                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Wedding</Text>
+                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A marriage ceremony, especially considered as including the associated celebrations.</Text>
                 </View>
             </View>
             </TouchableOpacity>
@@ -92,8 +92,8 @@ export default function Informal() {
                 <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/party.jpg")}/>
                 </View>
                 <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Party</Text>
-                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A social gathering of invited guests, typically involving eating, drinking, and entertainment.</Text>
+                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Party</Text>
+                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A social gathering of invited guests, typically involving eating, drinking, and entertainment.</Text>
                 </View>
             </View>
             </TouchableOpacity>
@@ -103,8 +103,8 @@ export default function Informal() {
                 <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/reunion.jpg")}/>
                 </View>
                 <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Reunion</Text>
-                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>An instance of two or more people coming together again after a period of separation.</Text>
+                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Reunion</Text>
+                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>An instance of two or more people coming together again after a period of separation.</Text>
                 </View>
             </View>
             </TouchableOpacity>
@@ -114,8 +114,8 @@ export default function Informal() {
                 <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/babyshower.jpg")}/>
                 </View>
                 <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Baby shower</Text>
-                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A party held for a woman who is expecting a baby, to which friends and relatives (typically female) bring gifts for the child.</Text>
+                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Baby shower</Text>
+                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A party held for a woman who is expecting a baby, to which friends and relatives (typically female) bring gifts for the child.</Text>
                 </View>
             </View>
             </TouchableOpacity>
@@ -125,8 +125,8 @@ export default function Informal() {
                 <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/picnic.jpg")}/>
                 </View>
                 <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#b2dfdb", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Picnic</Text>
-                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A meal taken outdoors (al fresco) as part of an excursion.</Text>
+                    <Text style={{color: "#00695c", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Picnic</Text>
+                    <Text style={{color: "#00695c", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A meal taken outdoors (al fresco) as part of an excursion.</Text>
                 </View>
             </View>
             </TouchableOpacity>

@@ -81,8 +81,8 @@ export default function Formal() {
                         <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/seminar.jpg")}/>
                         </View>
                         <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3, overflow: "hidden"}}>
-                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Seminar</Text>
-                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A conference or other meeting for discussion or training.</Text>
+                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Seminar</Text>
+                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A conference or other meeting for discussion or training.</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -93,8 +93,8 @@ export default function Formal() {
                         <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/boardmeeting.jpg")}/>
                         </View>
                         <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Board Meeting</Text>
-                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A meeting of a company's board of directors, held usually at certain times of the year to discuss company-wide policies or issues.</Text>
+                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Board Meeting</Text>
+                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A meeting of a company's board of directors, held usually at certain times of the year to discuss company-wide policies or issues.</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -105,8 +105,8 @@ export default function Formal() {
                         <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/conference.jpg")}/>
                         </View>
                         <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Conference</Text>
-                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A meeting of two or more persons for discussing matters of common concern.</Text>
+                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Conference</Text>
+                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A meeting of two or more persons for discussing matters of common concern.</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -117,8 +117,8 @@ export default function Formal() {
                         <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/productlaunch.jpg")}/>
                         </View>
                         <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Product launch</Text>
-                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A business's planned and coordinated effort to debut a new product to the market and make that product generally available for purchase.</Text>
+                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Product launch</Text>
+                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A business's planned and coordinated effort to debut a new product to the market and make that product generally available for purchase.</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -129,8 +129,8 @@ export default function Formal() {
                         <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/tradeshow.jpeg")}/>
                         </View>
                         <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Trade show</Text>
-                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>An exhibition at which businesses in a particular industry promote their products and services.</Text>
+                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Trade show</Text>
+                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>An exhibition at which businesses in a particular industry promote their products and services.</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -141,8 +141,8 @@ export default function Formal() {
                         <Image style={styles.imagee} resizeMode="contain" source={require("../assets/images/appreciationceremony.png")}/>
                         </View>
                         <View style={{width: screenWidth * 0.55, height: screenWidth * 0.2, backgroundColor: "#ef9a9a", borderBottomRightRadius: 3, borderTopRightRadius: 3}}>
-                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginLeft: 7, marginVertical: 5, fontWeight: "bold"}}>Appreciation ceremony</Text>
-                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginLeft: 7, flexWrap: "wrap"}}>A formal acknowledgment of a person or group of persons.</Text>
+                            <Text style={{color: "#990011FF", fontSize: 12, alignSelf: "flex-start", marginHorizontal: 7, marginVertical: 5, fontWeight: "bold"}}>Appreciation ceremony</Text>
+                            <Text style={{color: "#990011FF", fontSize: 9, alignSelf: "flex-start", marginHorizontal: 7, flexWrap: "wrap"}}>A formal acknowledgment of a person or group of persons.</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
